@@ -1,0 +1,518 @@
+/* Hero Section */
+.hero {
+    height: 80vh;
+    min-height: 600px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/restaurant/resto.jpg")no-repeat center center/cover;
+    /*background-image: url("public/images/restaurant/resto.jpg");*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 1rem;
+}
+
+.hero-content {
+    max-width: 800px;
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--white);
+    border: 2px solid var(--accent);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--white);
+    color: var(--dark);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Info Section */
+.info-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.info-card.highlight {
+    border-top: 5px solid var(--accent);
+}
+.info-iconimg1{
+    background-image: url(https://media.routard.com/image/59/5/saint-malo-2.1482595.w430.jpg);
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.info-iconimg2{
+    background-image: url("../images/plats/plat1.png");
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.info-iconimg3{
+    background-image: url("../images/restaurant/resto.jpg");
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.info-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light);
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.info-card:hover .info-icon {
+    background-color: var(--accent);
+    transform: rotate(10deg) scale(1.1);
+}
+
+.info-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.info-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+    font-family: 'Playfair Display', serif;
+}
+
+.info-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Styles de base responsive */
+
+
+/* Animations */
+@keyframes slideInFromLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInFromRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.slide-in-left {
+    animation: slideInFromLeft 0.5s ease forwards;
+}
+
+.slide-in-right {
+    animation: slideInFromRight 0.5s ease forwards;
+}
+
+/* Media Queries pour le responsive */
+@media (min-width: 576px) {
+    .specialite-card {
+        flex: 0 0 calc(50% - 30px);
+        height: 300px;
+    }
+}
+
+@media (min-width: 768px) {
+    .specialite-card {
+        flex: 0 0 calc(33.333% - 27px);
+        height: 350px;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .specialite-card {
+        flex: 0 0 calc(25% - 25px);
+        height: 400px;
+    }
+    
+    .specialites-section {
+        padding: 60px 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .specialite-card {
+        flex: 0 0 300px;
+    }
+}
+
+/* Masquer les boutons sur mobile si nécessaire */
+@media (max-width: 400px) {
+    .nav-btn {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .specialite-card {
+        flex: 0 0 calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .specialites-section {
+        padding: 3rem 0;
+    }
+    
+    .specialite-card {
+        flex: 0 0 85%;
+    }
+    
+    .specialite-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .specialite-card {
+        flex: 0 0 90%;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Hours & Map Section */
+.location-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.hours-container, .map-container {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.hours-container:hover, .map-container:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    color: var(--dark);
+}
+
+.section-header i {
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+.section-header h2 {
+    font-size: 1.8rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.hours-grid {
+    display: grid;
+    grid-template-columns: 0fr 1fr;
+    gap: 1rem;
+}
+
+.day, .time {
+    display: flex;
+    justify-content: end;
+    padding: 0.8rem;
+    border-bottom: 1px solid #eee;
+}
+
+.day {
+    font-weight: 600;
+    justify-content: start;
+}
+
+.map-wrapper {
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.map-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+address {
+    margin-top: 1rem;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+}
+
+
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .btn-primary, .btn-secondary {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .carousel-item img {
+        height: 400px;
+    }
+    
+    .carousel-caption {
+        padding: 1.5rem;
+    }
+    
+    .carousel-caption h3 {
+        font-size: 1.5rem;
+    }
+    
+    .location-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .newsletter-form input, .newsletter-form button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 70vh;
+        min-height: 500px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .info-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .carousel-item img {
+        height: 300px;
+    }
+    
+    .carousel-caption h3 {
+        font-size: 1.3rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Notre Histoire Section */
+.history-section {
+    background-color: var(--light);
+    padding: 4rem 2rem;
+}
+
+.history-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.history-text h2 {
+    font-size: 2rem;
+    color: var(--dark);
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+}
+
+.divider {
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent);
+    margin: 1rem 0 2rem;
+}
+
+.history-text p {
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.btn-history {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--accent);
+    color: white;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: var(--transition);
+    margin-top: 1rem;
+}
+
+.btn-history:hover {
+    background-color: var(--dark);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.history-image {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.history-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.history-image:hover img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .history-content {
+        grid-template-columns: 1fr; 
+    }
+    
+    .history-text {
+        order: 2;
+    }
+    
+    .history-image {
+        order: 1;
+    }
+}

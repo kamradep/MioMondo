@@ -1,0 +1,211 @@
+/* Styles pour les cartes de réservation */
+    .reservations-container {
+        padding: 50px 0;
+        background-color: rgba(255, 255, 255, 0.92);
+        min-height: 80vh;
+    }
+
+    .reservations-header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .reservations-header h1 {
+        font-size: 42px;
+        margin: 0 0 15px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #8b5a2b;
+        position: relative;
+        padding-bottom: 15px;
+    }
+
+    .reservations-header h1::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 3px;
+        background: #8b5a2b;
+    }
+
+    .reservations-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .reservation-card {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        position: relative;
+    }
+
+    .reservation-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-hover);
+    }
+
+    .card-header {
+        background: linear-gradient(90deg, #d4a76a, #8b5a2b);
+        color: white;
+        padding: 15px 20px;
+        position: relative;
+    }
+
+    .card-header h3 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .card-date {
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        background: rgba(0, 0, 0, 0.2);
+        padding: 3px 8px;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .card-detail {
+        display: flex;
+        margin-bottom: 12px;
+        align-items: center;
+    }
+
+    .detail-icon {
+        margin-right: 10px;
+        font-size: 18px;
+    }
+
+    .detail-text {
+        font-size: 16px;
+    }
+
+    .card-notes {
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px dashed #e0d5c8;
+        font-style: italic;
+        color: #666;
+    }
+
+    /* Animation */
+    .animate-item {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .animate-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .reservations-grid {
+            grid-template-columns: 1fr;
+            padding: 0 15px;
+        }
+        
+        .reservations-header h1 {
+            font-size: 32px;
+        }
+    }
+
+    /* Style général */
+    .dashboard {
+        font-family: 'Montserrat', sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+    }
+    
+    .dashboard-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 30px;
+        background-color: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+        z-index: 100;
+    }
+    
+    .dashboard h1 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: 600;
+        color: #2c3e50;
+    }
+    
+    .user-info {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .welcome-message {
+        font-size: 14px;
+        color: #6c757d;
+    }
+    
+    .welcome-message strong {
+        color: #2c3e50;
+        font-weight: 600;
+    }
+    
+    /* Bouton de déconnexion */
+    .logout-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 16px;
+        background-color: #e74c3c;
+        color: white !important;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+    
+    .logout-btn:hover {
+        background-color: #c0392b;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(231, 76, 60, 0.2);
+    }
+    
+    .logout-btn i {
+        font-size: 14px;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+        .dashboard-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 15px;
+        }
+        
+        .user-info {
+            width: 100%;
+            justify-content: space-between;
+        }
+    }

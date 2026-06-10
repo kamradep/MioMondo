@@ -1,0 +1,73 @@
+# macOS/Windows system files
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+Icon
+$RECYCLE.BIN/
+
+# IDE/editor folders
+.vscode/
+.idea/
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
+*.phpstorm.meta.php
+*.iml
+
+# PHP vendor/dependency directories
+/vendor/
+composer.phar
+
+# Environment and secrets
+.env
+.env.*
+
+# Logs and temporary files
+*.log
+*.log.*
+*.tmp
+*.temp
+*.cache
+*.pid
+*.seed
+*.swp
+*~
+*.bak
+tmp/
+temp/
+cache/
+
+# Node.js
+node_modules/
+pnpm-lock.yaml
+yarn.lock
+yarn-error.log*
+npm-debug.log*
+
+# Build / distribution artifacts
+dist/
+build/
+coverage/
+public/build/
+public/dist/
+
+# Docker / database data
+docker-compose.override.yml
+docker-compose.override.yaml
+**/mysql/data/
+apache/mysql/data/
+**/mysql/**/data/
+**/tmp/
+**/cache/
+
+# Misc
+*.pem
+*.key
+*.crt
+*.p12
+*.jks
+
+# Composer lock may be useful if you use composer, but ignore generated vendor directory
+# Uncomment if you want Composer lock files ignored too
+# composer.lock
