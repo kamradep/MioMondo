@@ -80,6 +80,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['envoyer'])) {
             </div>
         <?php endif; ?>
         
+        <!-- Formulaire de réservation temporairement désactivé -->
+        <!--
         <form class="reservation-form" method="POST">
             <div class="form-group">
                 <label for="name">Nom complet</label>
@@ -137,8 +139,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['envoyer'])) {
             </div>
             
             <button type="submit" value="Reservation" name="envoyer">Réserver une table</button>
-            
         </form>
+        -->
+
+        <div class="reservation-window animate-item">
+            <h2>Réservation par téléphone</h2>
+            <p>Toutes les réservations sont à réaliser en appelant le numéro suivant :</p>
+            <p class="reservation-phone" href="tel:0223176446" ><strong >02 23 17 64 46</strong></p>
+            <p>Nous vous remercions de votre compréhension.</p>
+        </div>
                 
                 <div class="contact-info animate-item">
                     <h2>Contact direct</h2>
@@ -164,5 +173,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['envoyer'])) {
         </div>
     </main>
     <style>
+        .reservation-window {
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid #e0e0e0;
+            border-radius: 18px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+            margin: 30px 0;
+            max-width: 720px;
+            text-align: center;
+        }
 
+        .reservation-window h2 {
+            margin-bottom: 18px;
+            font-size: 1.9rem;
+        }
+
+        .reservation-window p {
+            margin: 12px 0;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        .reservation-window .reservation-phone {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #b71c1c;
+            margin: 18px 0;
+        }
     </style>
